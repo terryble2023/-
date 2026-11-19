@@ -1,0 +1,63 @@
+# ---------- 构建产物 ----------
+build/
+build-*/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+compile_commands.json
+*.o
+*.obj
+*.a
+*.so
+*.so.*
+*.dylib
+*.exe
+*.out
+
+# ---------- 程序运行产物 ----------
+# 现在 main.cpp 里没有 imwrite，这两条是给以后加保存功能时留的
+binary_image.png
+result_image.png
+out_*.png
+frame_*.png
+
+# ---------- 标定产物 ----------
+# 标定结果和你自己的摄像头绑定，换机器、换分辨率就失效了，不该进仓库。
+# 如果老师要求把标定参数一起交，把下面几行删掉即可。
+/camera.yml
+/cameraParameters.xml
+/calib*.yml
+/calib*.xml
+
+# 注意：assets/camera_example.yml 是演示用的固定参数，故意保留，
+# 不受上面规则影响（上面都限定了仓库根目录）
+
+# ---------- 编辑器 / IDE ----------
+.vscode/
+.idea/
+.cache/
+.clangd/
+*.swp
+*.swo
+*~
+
+# 想保留 VS Code 的编译配置、只忽略个人路径文件的话，把上面两行换成：
+# .vscode/*
+# !.vscode/c_cpp_properties.json
+
+# ---------- 编辑器附带的设备标识 ----------
+# MarsCode 的 deviceInfo.json 里存着设备 ID，属于本机信息，不提交
+.marscode/
+
+# ---------- 操作系统杂项 ----------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---------- 其他 ----------
+*.log
+__pycache__/
+/core
+core.[0-9]*
